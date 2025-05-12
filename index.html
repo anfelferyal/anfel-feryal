@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Feryel Anfal - Tensiomètre</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(to bottom, #e3f2fd, #ffffff); /* أزرق مخفف */
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    .logo {
+      background-color: #90caf9; /* أزرق فاتح */
+      padding: 15px;
+      text-align: center;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      animation: pulseTitle 2.5s infinite alternate ease-in-out;
+    }
+
+    @keyframes pulseTitle {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.15); }
+    }
+
+    .marquee {
+      background: linear-gradient(90deg, #bbdefb, #e3f2fd); /* تدرج أزرق خفيف */
+      color: #003366;
+      font-size: 18px;
+      font-weight: bold;
+      overflow: hidden;
+      white-space: nowrap;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .marquee span {
+      display: inline-block;
+      padding: 10px 0;
+      animation: scrollText 12s linear infinite;
+    }
+
+    @keyframes scrollText {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    header {
+      text-align: center;
+      font-size: 34px;
+      padding: 40px 20px;
+      color: #1976d2;
+    }
+
+    .content {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 30px;
+      background-color: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      animation: fadeInUp 1.2s ease-out;
+      text-align: center;
+    }
+
+    @keyframes fadeInUp {
+      from { transform: translateY(60px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .content p {
+      font-size: 20px;
+      margin-bottom: 25px;
+    }
+
+    .email-login {
+      margin-top: 20px;
+    }
+
+    .email-login input[type="email"] {
+      padding: 12px;
+      font-size: 16px;
+      width: 70%;
+      max-width: 300px;
+      border: 2px solid #90caf9; /* حدود زرقاء فاتحة */
+      border-radius: 8px;
+      margin-right: 10px;
+    }
+
+    .email-login button {
+      padding: 12px 20px;
+      font-size: 16px;
+      background-color: #64b5f6; /* أزرق أفتح */
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .email-login button:hover {
+      background-color: #42a5f5;
+    }
+
+    footer {
+      background: #64b5f6;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- شعار متحرك -->
+  <div class="logo">Boutique MedicaPlus</div>
+
+  <!-- شريط التخفيضات بتدرج أزرق فاتح -->
+  <div class="marquee">
+    <span>🔥 Offres spéciales en cours ! Profitez des meilleures remises sur les équipements médicaux ! 🔥</span>
+  </div>
+
+  <!-- شعار بصورة -->
+  <div class="logo">
+    <img src="c:\Users\win\Desktop\فريال انفال\photo_2025-05-09_15-53-27.jpg" alt="Feryel Inval Logo" style="height: 80px;">
+  </div>
+
+  <!-- محتوى الصفحة -->
+  <div class="content">
+    <p>Bienvenue ! Entrez votre adresse e-mail pour accéder aux autres pages de produits et découvrir nos offres exceptionnelles.</p>
+
+    <div class="email-login">
+      <form action="pag2.html" method="GET">
+        <input type="email" name="email" required placeholder="Votre e-mail">
+        <button type="submit">Continuer</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- التذييل -->
+  <footer>
+    &copy; <?php echo date('Y'); ?> MedicaPlus - Tous droits réservés.
+  </footer>
+
+</body>
+</html>
